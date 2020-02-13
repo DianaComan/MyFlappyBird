@@ -1,0 +1,42 @@
+==================================================================
+
+Elemente De Grafica Pe Calculator
+Tema1 - My Flappy Bird
+Nume - Coman Diana Stefania
+Grupa - 335CA
+
+==================================================================
+
+Tema este pusa in folderul Laboratoare/Tema1
+Ea contine:
+ - Transform2D.h - implementeaza functii de rotatie, translatie,
+scalare
+
+ - Object2D.h, Object2D.cpp - crearea unui patrat si a unui 
+triunghi
+
+ - Tema1.h, Tema1.cpp :
+ In init, se initializeaza variabilele, pt scalari, pt translatii,
+pt afisarea scorului, ptr pasare etc
+ Se creeaza cateva obiecte 2D: patrate (atat pt patrate propriu-
+zise cat si pt pipe-uri), un cerc si un triunghi (pt pasare)
+ 
+ In update, se creeaza marginile jocului (square3), pipe-urile
+(pipe1) si pasarea (alcatuita din patrat, cerc si triunghi).
+ Pipe-urile se vor misca spre stanga cu ajutorul lui translateX
+Sunt 10 pipeuri care vor avea inaltimi random (retinute in vectorii
+y si y1) puse doua cate doua astfel incat pasarea sa incapa
+printre ele. La fiecare pipe care urmeaza sa treaca pe langa pasare
+se va retine inaltimea pt a verifica coliziunile.
+ Pasarea este alcatuita dintr-un patrat, un cerc si un triunghi.
+Ele se vor misca automat in jos, iar la apasarea tastei space se 
+vor misca in sus (vor sari). Aceste lucruri se intampla prin
+translatie pe axa Oy.
+ Din 3 in 3 secunde se afiseaza scorul la consola
+ La o coliziune cu limitele superioare inferioare sau cu un pipe se
+afiseaza scorul final apoi ecranul devine negru, semn ca jocul s-a 
+incheiat.
+ 
+ In OnKeyPress si OnKeyRelease se stabileste conditia pt saritura.
+(exista o variabila si in functie de ea se face un salt sau pasarea
+cade liber)
